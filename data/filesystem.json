@@ -1,0 +1,126 @@
+{
+  "name": "/",
+  "type": "directory",
+  "children": [
+    {
+      "name": "home",
+      "type": "directory",
+      "children": [
+        {
+          "name": "ali",
+          "type": "directory",
+          "children": [
+            {
+              "name": "about.txt",
+              "type": "file",
+              "content": "╔══════════════════════════════════════════════════════════════╗\n║                         ALI ALACA                            ║\n║                    Fullstack Developer                       ║\n╚══════════════════════════════════════════════════════════════╝\n\nMerhaba! Ben Ali Alaca.\n\nYazılım geliştirme tutkusu olan bir fullstack developer'ım.\nModern web teknolojileri, sistem programlama ve DevOps\nalanlarında çalışıyorum.\n\n📍 Konum: Türkiye\n📧 Email: ali@alialaca.dev\n🔗 GitHub: github.com/alialaca\n🔗 LinkedIn: linkedin.com/in/alialaca\n\nTeknolojiler:\n  • Frontend: Vue.js, React, TypeScript\n  • Backend: Node.js, Go, Python\n  • DevOps: Docker, Kubernetes, Linux\n  • Database: PostgreSQL, MongoDB, Redis\n\nDaha fazla bilgi için 'projects' klasörüne göz atın!\n\nKomutlar hakkında bilgi için: help"
+            },
+            {
+              "name": "projects",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "README.md",
+                  "type": "file",
+                  "content": "# Projelerim\n\nBu klasörde geliştirdiğim projelerin detaylarını bulabilirsiniz.\n\n## Kategoriler\n\n- **web/** - Web uygulamaları\n- **cli/** - Komut satırı araçları\n- **devops/** - DevOps ve otomasyon projeleri\n\nHer proje dosyası detaylı açıklama, kullanılan teknolojiler ve bağlantılar içerir."
+                },
+                {
+                  "name": "web",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "terminal-portfolio.md",
+                      "type": "file",
+                      "content": "# Terminal Portfolio\n\n**Durum:** Aktif Geliştirme\n**Teknolojiler:** Nuxt 3, Vue 3, TypeScript, TailwindCSS\n\n## Açıklama\n\nTamamen terminal temalı, interaktif bir portfolyo web sitesi. Gerçek bir CLI deneyimi sunar.\n\n## Özellikler\n\n- Terminal benzeri arayüz\n- Dosya sistemi navigasyonu (ls, cd, pwd, tree)\n- Markdown dosya görüntüleme\n- Komut geçmişi ve tab completion\n- Responsive tasarım\n\n## Demo\n\n🔗 [alialaca.dev](https://alialaca.dev)\n\n## Kaynak Kod\n\n🔗 [GitHub](https://github.com/alialaca/portfolio)"
+                    },
+                    {
+                      "name": "task-manager.md",
+                      "type": "file",
+                      "content": "# Task Manager App\n\n**Durum:** Tamamlandı\n**Teknolojiler:** React, Node.js, PostgreSQL, Docker\n\n## Açıklama\n\nTakım bazlı görev yönetim uygulaması. Kanban board, zaman takibi ve raporlama özellikleri içerir.\n\n## Özellikler\n\n- Drag & drop kanban board\n- Gerçek zamanlı güncelleme (WebSocket)\n- Görev atama ve takip\n- Sprint planlama\n- Detaylı raporlar\n\n## Ekran Görüntüleri\n\n[Yakında eklenecek]\n\n## Kaynak Kod\n\n🔗 [GitHub](https://github.com/alialaca/task-manager)"
+                    }
+                  ]
+                },
+                {
+                  "name": "cli",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "git-helper.md",
+                      "type": "file",
+                      "content": "# Git Helper CLI\n\n**Durum:** Tamamlandı\n**Teknolojiler:** Go, Cobra\n\n## Açıklama\n\nGit iş akışını hızlandıran komut satırı aracı. Sık kullanılan git komut dizilerini tek komutla çalıştırır.\n\n## Kurulum\n\n```bash\ngo install github.com/alialaca/git-helper@latest\n```\n\n## Kullanım\n\n```bash\n# Hızlı commit ve push\ngit-helper push \"commit mesajı\"\n\n# Branch temizliği\ngit-helper clean-branches\n\n# Interaktif rebase\ngit-helper rebase-i\n```\n\n## Kaynak Kod\n\n🔗 [GitHub](https://github.com/alialaca/git-helper)"
+                    }
+                  ]
+                },
+                {
+                  "name": "devops",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "k8s-deploy-tool.md",
+                      "type": "file",
+                      "content": "# Kubernetes Deploy Tool\n\n**Durum:** Aktif Geliştirme\n**Teknolojiler:** Python, Kubernetes API, Click\n\n## Açıklama\n\nKubernetes deployment'larını yönetmek için CLI aracı. Blue-green ve canary deployment stratejilerini destekler.\n\n## Özellikler\n\n- Otomatik rollback\n- Canary deployment\n- Blue-green deployment\n- Deployment geçmişi\n- Slack bildirimleri\n\n## Kurulum\n\n```bash\npip install k8s-deploy-tool\n```\n\n## Kaynak Kod\n\n🔗 [GitHub](https://github.com/alialaca/k8s-deploy-tool)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "blog",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "README.md",
+                  "type": "file",
+                  "content": "# Blog Yazıları\n\nTeknik blog yazılarım ve notlarım.\n\n## Kategoriler\n\n- Yazılım Geliştirme\n- DevOps\n- Kişisel Gelişim\n\n---\n\n*Yazılar yakında eklenecek.*"
+                },
+                {
+                  "name": "2024-01-vue-composition-api.md",
+                  "type": "file",
+                  "content": "# Vue 3 Composition API: Kapsamlı Rehber\n\n**Tarih:** 15 Ocak 2024\n**Kategori:** Frontend\n**Okuma Süresi:** 10 dakika\n\n---\n\n## Giriş\n\nVue 3 ile birlikte gelen Composition API, component mantığını organize etmek için yeni bir yaklaşım sunuyor.\n\n## Options API vs Composition API\n\n### Options API\n\n```javascript\nexport default {\n  data() {\n    return { count: 0 }\n  },\n  methods: {\n    increment() {\n      this.count++\n    }\n  }\n}\n```\n\n### Composition API\n\n```javascript\nimport { ref } from 'vue'\n\nexport default {\n  setup() {\n    const count = ref(0)\n    const increment = () => count.value++\n    \n    return { count, increment }\n  }\n}\n```\n\n## Composables ile Kod Paylaşımı\n\nComposition API'nin en güçlü yanlarından biri, mantığı yeniden kullanılabilir \"composable\" fonksiyonlara çıkarabilmektir.\n\n```javascript\n// useCounter.js\nimport { ref } from 'vue'\n\nexport function useCounter(initial = 0) {\n  const count = ref(initial)\n  const increment = () => count.value++\n  const decrement = () => count.value--\n  \n  return { count, increment, decrement }\n}\n```\n\n## Sonuç\n\nComposition API, özellikle büyük uygulamalarda kod organizasyonunu iyileştirir ve mantığın yeniden kullanılabilirliğini artırır.\n\n---\n\n*Bu yazı faydalı olduysa, diğer yazılarıma da göz atabilirsiniz.*"
+                }
+              ]
+            },
+            {
+              "name": "certificates",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "README.md",
+                  "type": "file",
+                  "content": "# Sertifikalar\n\nAldığım sertifikalar ve başarılar.\n\n---\n\n## AWS\n- AWS Solutions Architect Associate (2023)\n\n## Kubernetes\n- CKA - Certified Kubernetes Administrator (2023)\n\n## Diğer\n- Docker Certified Associate (2022)"
+                }
+              ]
+            },
+            {
+              "name": "hobbies",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "README.md",
+                  "type": "file",
+                  "content": "# Hobiler & İlgi Alanları\n\n## Teknoloji\n- Open source projelere katkı\n- Yeni programlama dilleri öğrenme\n- Home lab kurma ve yönetme\n\n## Spor\n- Yüzme\n- Bisiklet\n\n## Diğer\n- Kitap okuma (Bilim kurgu, teknik kitaplar)\n- Podcast dinleme\n- Fotoğrafçılık"
+                }
+              ]
+            },
+            {
+              "name": "contact.txt",
+              "type": "file",
+              "content": "╔══════════════════════════════════════════════════════════════╗\n║                        İLETİŞİM                              ║\n╚══════════════════════════════════════════════════════════════╝\n\nBenimle iletişime geçmek için:\n\n📧 Email: ali@alialaca.dev\n\n🔗 Sosyal Medya:\n   • GitHub: github.com/alialaca\n   • LinkedIn: linkedin.com/in/alialaca\n   • Twitter: @alialaca\n\n💼 İş Teklifleri:\n   İş fırsatları için email üzerinden ulaşabilirsiniz.\n\n🤝 Open Source:\n   Projelerime katkıda bulunmak isterseniz GitHub'dan\n   issue açabilir veya PR gönderebilirsiniz."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "etc",
+      "type": "directory",
+      "children": [
+        {
+          "name": "motd",
+          "type": "file",
+          "content": "Welcome to alialaca.dev!\n\nType 'help' to see available commands.\nType 'cat about.txt' to learn more about me."
+        }
+      ]
+    }
+  ]
+}
