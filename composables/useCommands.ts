@@ -81,31 +81,13 @@ export function useCommands() {
         return cmdLogout()
       default:
         return {
-          output: [error(`Komut bulunamadı: ${command}. Kullanılabilir komutlar için 'help' yazın.`)],
+          output: [error(`command not found: ${command}`)],
         }
     }
   }
 
   function cmdHelp(): CommandResult {
-    const output: OutputLine[] = [
-      text(''),
-      info('Kullanılabilir Komutlar:'),
-      text(''),
-    ]
-
-    for (const cmd of COMMANDS) {
-      output.push(text(`  ${cmd.name.padEnd(12)} ${cmd.description}`, 'help-line'))
-    }
-
-    output.push(text(''))
-    output.push(info('Klavye Kısayolları:'))
-    output.push(text(''))
-    output.push(text('  ↑/↓          Komut geçmişinde gezin'))
-    output.push(text('  Tab          Otomatik tamamlama'))
-    output.push(text('  Ctrl+L       Ekranı temizle'))
-    output.push(text('  Ctrl+C       Komutu iptal et'))
-    output.push(text(''))
-
+    const output: OutputLine[] = COMMANDS.map((cmd) => text(cmd.usage))
     return { output }
   }
 
