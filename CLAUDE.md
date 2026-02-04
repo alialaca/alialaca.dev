@@ -14,6 +14,8 @@ Terminal temalı, interaktif portfolyo web uygulaması.
 
 ```
 portfolio/
+├── pages/
+│   └── index.vue                 # Ana sayfa
 ├── components/
 │   ├── TerminalApp.vue           # Ana terminal bileşeni
 │   ├── Terminal/
@@ -30,6 +32,10 @@ portfolio/
 │   ├── auth.ts                   # Authentication state
 │   ├── fileSystem.ts             # Sanal dosya sistemi
 │   └── terminal.ts               # Terminal geçmişi ve viewer state
+├── server/
+│   ├── api/
+│   │   └── auth/                 # Auth API (henüz boş)
+│   └── utils/                    # Server utilities (henüz boş)
 ├── data/
 │   └── filesystem.json           # Sanal dosya yapısı (portfolyo içeriği)
 ├── types/
@@ -64,7 +70,7 @@ docker compose up --build
 | `tree` | Dizin yapısını ağaç olarak gösterir |
 | `clear` | Terminali temizler |
 | `whoami` | Mevcut kullanıcıyı gösterir |
-| `login <user> <pass>` | Sisteme giriş yapar |
+| `login` | Sisteme giriş yapar |
 | `logout` | Sistemden çıkış yapar |
 
 ## Klavye Kısayolları
@@ -73,6 +79,7 @@ docker compose up --build
 - `Tab` - Otomatik tamamlama
 - `Ctrl+L` - Ekranı temizle
 - `Ctrl+C` - Komutu iptal et
+- `Ctrl+U` - Satırı temizle
 - `ESC/q` - File viewer'dan çık
 
 ---
@@ -81,10 +88,10 @@ docker compose up --build
 
 ### Faz 2: Gelişmiş Özellikler
 
-- [ ] **Syntax highlighting:** Shiki ile kod bloklarını renklendir
+- [ ] **Syntax highlighting:** Shiki ile kod bloklarını renklendir *(Shiki paketi yüklü, entegrasyon bekliyor)*
 - [ ] **Tema seçimi:** Birden fazla terminal teması (dracula, monokai, vb.)
 - [ ] **Responsive:** Mobil cihazlar için optimize et
-- [ ] **Animasyonlar:** Yazı efekti, smooth scroll
+- [ ] **Animasyonlar:** Yazı efekti, smooth scroll *(Mevcut: fadeIn input hint, cursor blink)*
 - [ ] **Sound effects:** Tuş sesleri (opsiyonel)
 
 ### Faz 3: Auth & CRUD Komutları
@@ -104,6 +111,8 @@ Authenticated kullanıcılar için dosya sistemi düzenleme:
 - Auth kontrolü: `auth.isAuthenticated` kontrol et
 
 ### Faz 4: Backend Entegrasyonu
+
+*Not: Server klasör yapısı hazır (`server/api/auth/`, `server/utils/`)*
 
 - [ ] **Server API routes:**
   - `server/api/filesystem.get.ts` - Dosya sistemi okuma
