@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, nextTick, onMounted } from 'vue'
+import { ref, nextTick, onMounted, computed } from 'vue'
 import { useTerminalStore } from '~/stores/terminal'
 import { useFileSystemStore } from '~/stores/fileSystem'
 import { useCommands } from '~/composables/useCommands'
@@ -20,11 +20,9 @@ const welcomeMessage = `
 ╚═╝  ╚═╝╚══════╝╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 `
 
-const welcomeInfo = `Welcome to alialaca.dev - Interactive Terminal Portfolio
+const welcomeInfo = `Welcome to alialaca.dev - Interactive Terminal Portfolio`
 
-Type 'help' to see available commands.
-Type 'cat about.txt' to learn more about me.
-`
+const hasHistory = computed(() => terminal.history.length > 0)
 
 onMounted(() => {
   scrollToBottom()
@@ -72,22 +70,21 @@ function handleViewerClose() {
 </script>
 
 <template>
-  <div class="terminal-container">
-    <!-- Terminal Body -->
-    <div ref="terminalBodyRef" class="terminal-body" @click="handleBodyClick">
-      <div class="terminal-content">
-        <!-- Welcome Message -->
-        <div class="welcome-message">
-          <pre class="welcome-ascii">{{ welcomeMessage }}</pre>
-          <pre class="welcome-info">{{ welcomeInfo }}</pre>
-        </div>
+  <div class="terminal-container" @click="handleBodyClick">
+    <!-- Centered Welcome (shown when no history) -->
+    <div v-if="!hasHistory" class="welcome-center">
+      <pre class="welcome-ascii">{{ welcomeMessage }}</pre>
+      <p class="welcome-info">{{ welcomeInfo }}</p>
+    </div>
 
-        <!-- Output History -->
-        <TerminalOutput :entries="terminal.history" />
+    <!-- Scrollable History Area (shown when has history) -->
+    <div v-else ref="terminalBodyRef" class="terminal-history">
+      <TerminalOutput :entries="terminal.history" />
+    </div>
 
-        <!-- Input Line -->
-        <TerminalInput ref="inputRef" @submit="handleCommand" />
-      </div>
+    <!-- Fixed Bottom Command Line -->
+    <div class="terminal-input-area">
+      <TerminalInput ref="inputRef" @submit="handleCommand" />
     </div>
 
     <!-- File Viewer Overlay -->

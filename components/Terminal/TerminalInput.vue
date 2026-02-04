@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, nextTick, watch } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { useTerminalStore } from '~/stores/terminal'
 import { useTabCompletion } from '~/composables/useTabCompletion'
 
@@ -14,9 +14,33 @@ const inputValue = ref('')
 const inputRef = ref<HTMLInputElement | null>(null)
 const suggestions = ref<string[]>([])
 const showSuggestions = ref(false)
+const showHint = ref(false)
+let hintTimeout: ReturnType<typeof setTimeout> | null = null
+
+function startHintTimer() {
+  clearHintTimer()
+  if (inputValue.value === '' && terminal.history.length === 0) {
+    hintTimeout = setTimeout(() => {
+      showHint.value = true
+    }, 5000)
+  }
+}
+
+function clearHintTimer() {
+  if (hintTimeout) {
+    clearTimeout(hintTimeout)
+    hintTimeout = null
+  }
+  showHint.value = false
+}
 
 onMounted(() => {
   focusInput()
+  startHintTimer()
+})
+
+onUnmounted(() => {
+  clearHintTimer()
 })
 
 function focusInput() {
@@ -110,8 +134,13 @@ function handleContainerClick() {
   focusInput()
 }
 
-// Hide suggestions when input changes
+// Hide suggestions and hint when input changes
 watch(inputValue, () => {
+  // Clear hint when user starts typing
+  if (inputValue.value !== '') {
+    clearHintTimer()
+  }
+
   if (showSuggestions.value && suggestions.value.length > 0) {
     // Değer değiştiğinde önerileri gizle
     const result = getCompletion(inputValue.value)
@@ -142,6 +171,9 @@ defineExpose({ focusInput })
           @keydown="handleKeyDown"
           @keydown.enter="handleSubmit"
         />
+        <span v-if="showHint && inputValue === ''" class="input-hint">
+          Type 'help' to get started
+        </span>
       </div>
     </div>
 
@@ -162,6 +194,30 @@ defineExpose({ focusInput })
 <style scoped>
 .terminal-input-container {
   min-height: 1.5rem;
+}
+
+.terminal-input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.input-hint {
+  position: absolute;
+  left: 0.5rem;
+  color: var(--terminal-gray);
+  pointer-events: none;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .suggestions {
