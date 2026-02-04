@@ -73,17 +73,6 @@ function handleViewerClose() {
 
 <template>
   <div class="terminal-container">
-    <!-- Terminal Header -->
-    <div class="terminal-header">
-      <div class="terminal-header-buttons">
-        <span class="terminal-header-button close" />
-        <span class="terminal-header-button minimize" />
-        <span class="terminal-header-button maximize" />
-      </div>
-      <span class="terminal-header-title">ali@alialaca.dev: ~</span>
-      <div class="w-16" />
-    </div>
-
     <!-- Terminal Body -->
     <div ref="terminalBodyRef" class="terminal-body" @click="handleBodyClick">
       <!-- Welcome Message -->
@@ -110,8 +99,3 @@ function handleViewerClose() {
   </div>
 </template>
 
-<style scoped>
-.w-16 {
-  width: 4rem;
-}
-</style>
