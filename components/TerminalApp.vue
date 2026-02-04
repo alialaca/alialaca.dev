@@ -75,17 +75,19 @@ function handleViewerClose() {
   <div class="terminal-container">
     <!-- Terminal Body -->
     <div ref="terminalBodyRef" class="terminal-body" @click="handleBodyClick">
-      <!-- Welcome Message -->
-      <div class="welcome-message">
-        <pre class="welcome-ascii">{{ welcomeMessage }}</pre>
-        <pre class="welcome-info">{{ welcomeInfo }}</pre>
+      <div class="terminal-content">
+        <!-- Welcome Message -->
+        <div class="welcome-message">
+          <pre class="welcome-ascii">{{ welcomeMessage }}</pre>
+          <pre class="welcome-info">{{ welcomeInfo }}</pre>
+        </div>
+
+        <!-- Output History -->
+        <TerminalOutput :entries="terminal.history" />
+
+        <!-- Input Line -->
+        <TerminalInput ref="inputRef" @submit="handleCommand" />
       </div>
-
-      <!-- Output History -->
-      <TerminalOutput :entries="terminal.history" />
-
-      <!-- Input Line -->
-      <TerminalInput ref="inputRef" @submit="handleCommand" />
     </div>
 
     <!-- File Viewer Overlay -->
