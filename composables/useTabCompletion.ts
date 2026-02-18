@@ -9,7 +9,7 @@ export interface CompletionResult {
 
 export function useTabCompletion() {
   const fileSystem = useFileSystemStore()
-  const { getCommandNames } = useCommands()
+  const { getCommandNames, getAliasNames } = useCommands()
 
   function getCompletion(input: string): CompletionResult {
     const trimmed = input.trimStart()
@@ -39,7 +39,9 @@ export function useTabCompletion() {
 
   function completeCommand(partial: string): CompletionResult {
     const commands = getCommandNames()
-    const matches = commands.filter((cmd) => cmd.startsWith(partial.toLowerCase()))
+    const aliases = getAliasNames()
+    const allCommands = [...commands, ...aliases]
+    const matches = allCommands.filter((cmd) => cmd.startsWith(partial.toLowerCase()))
 
     if (matches.length === 0) {
       return { suggestions: [], commonPrefix: '', completed: partial }

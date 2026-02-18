@@ -23,6 +23,26 @@ const COMMANDS: CommandDefinition[] = [
   { name: 'logout', description: 'Sistemden çıkış yapar', usage: 'logout' },
 ]
 
+// Alias tanımları (help komutunda görünmez)
+const ALIASES: Record<string, string> = {
+  'll': 'ls -la',
+  '..': 'cd ..',
+}
+
+// Alias çözümleme fonksiyonu
+function resolveAlias(input: string): string {
+  const parts = input.trim().split(/\s+/)
+  const cmd = parts[0]
+
+  if (cmd && ALIASES[cmd]) {
+    const aliasExpanded = ALIASES[cmd]
+    const extraArgs = parts.slice(1).join(' ')
+    return extraArgs ? `${aliasExpanded} ${extraArgs}` : aliasExpanded
+  }
+
+  return input
+}
+
 export function useCommands() {
   const fileSystem = useFileSystemStore()
   const terminal = useTerminalStore()
@@ -54,7 +74,10 @@ export function useCommands() {
       return { output: [] }
     }
 
-    const parts = trimmed.split(/\s+/)
+    // Alias çözümle
+    const resolved = resolveAlias(trimmed)
+
+    const parts = resolved.split(/\s+/)
     const command = parts[0].toLowerCase()
     const args = parts.slice(1)
 
@@ -264,9 +287,15 @@ export function useCommands() {
     return { output: [success(`Görüşürüz, ${oldUser}!`)] }
   }
 
+  function getAliasNames(): string[] {
+    return Object.keys(ALIASES)
+  }
+
   return {
     executeCommand,
     getCommandNames,
+    getAliasNames,
     COMMANDS,
+    ALIASES,
   }
 }
