@@ -13,7 +13,12 @@
             {
               "name": "about.txt",
               "type": "file",
-              "content": "╔══════════════════════════════════════════════════════════════╗\n║                         ALI ALACA                            ║\n║                    Fullstack Developer                       ║\n╚══════════════════════════════════════════════════════════════╝\n\nMerhaba! Ben Ali Alaca.\n\nYazılım geliştirme tutkusu olan bir fullstack developer'ım.\nModern web teknolojileri, sistem programlama ve DevOps\nalanlarında çalışıyorum.\n\n📍 Konum: Türkiye\n📧 Email: ali@alialaca.dev\n🔗 GitHub: github.com/alialaca\n🔗 LinkedIn: linkedin.com/in/alialaca\n\nTeknolojiler:\n  • Frontend: Vue.js, React, TypeScript\n  • Backend: Node.js, Go, Python\n  • DevOps: Docker, Kubernetes, Linux\n  • Database: PostgreSQL, MongoDB, Redis\n\nDaha fazla bilgi için 'projects' klasörüne göz atın!\n\nKomutlar hakkında bilgi için: help"
+              "content": "╔══════════════════════════════════════════════════════════════╗\n║                         ALI ALACA                            ║\n║                    Fullstack Developer                       ║\n╚══════════════════════════════════════════════════════════════╝\n\nMerhaba! Ben Ali Alaca.\nİzmir, Türkiye merkezli bir fullstack developer'ım.\nModern web uygulamaları, API entegrasyonları, masaüstü\nuygulamaları ve DevOps alanlarında çalışıyorum.\n\n────────────────────────────────────────────────────────────────\n  TECH STACK\n────────────────────────────────────────────────────────────────\n\n  Frontend     : Vue.js, Nuxt, TypeScript, Tailwind CSS\n  Backend      : Node.js, Go, C#, Java\n  Desktop      : Electron.js\n  DevOps       : Docker, Kubernetes, GitOps\n  Database     : Supabase, PostgreSQL\n  Mimari       : Mikroservisler, REST API\n\n────────────────────────────────────────────────────────────────\n  BAĞLANTILAR\n────────────────────────────────────────────────────────────────\n\n  GitHub       : github.com/alialaca\n  Website      : alialaca.dev\n  Email        : alialaca0@gmail.com\n\n────────────────────────────────────────────────────────────────\n\nDaha fazla bilgi için 'projects' klasörüne göz atın!\nKomutlar hakkında bilgi için: help"
+            },
+            {
+              "name": "contact.txt",
+              "type": "file",
+              "content": "╔══════════════════════════════════════════════════════════════╗\n║                        İLETİŞİM                              ║\n╚══════════════════════════════════════════════════════════════╝\n\nBenimle iletişime geçmek için:\n\n  📧 Email    : alialaca0@gmail.com\n  🔗 GitHub   : github.com/alialaca\n  🌐 Website  : alialaca.dev\n\n💼 İş Teklifleri:\n   İş fırsatları için email üzerinden ulaşabilirsiniz.\n\n🤝 Open Source:\n   Projelerime katkıda bulunmak isterseniz GitHub'dan\n   issue açabilir veya PR gönderebilirsiniz."
             },
             {
               "name": "projects",
@@ -22,7 +27,7 @@
                 {
                   "name": "README.md",
                   "type": "file",
-                  "content": "# Projelerim\n\nBu klasörde geliştirdiğim projelerin detaylarını bulabilirsiniz.\n\n## Kategoriler\n\n- **web/** - Web uygulamaları\n- **cli/** - Komut satırı araçları\n- **devops/** - DevOps ve otomasyon projeleri\n\nHer proje dosyası detaylı açıklama, kullanılan teknolojiler ve bağlantılar içerir."
+                  "content": "# Projelerim\n\nBu klasörde geliştirdiğim projelerin detaylarını bulabilirsiniz.\n\n## Kategoriler\n\n- **web/** — Web uygulamaları (6 proje)\n- **api/** — Backend & API servisleri (4 proje)\n- **desktop/** — Masaüstü uygulamaları (1 proje)\n- **devops/** — DevOps & altyapı projeleri (2 proje)\n\n## Teknolojiler\n\nVue.js, Nuxt, TypeScript, Node.js, Electron, Docker, Kubernetes\n\n---\n\nHer proje dosyasında detaylı açıklama, teknolojiler ve GitHub bağlantısı bulunur."
                 },
                 {
                   "name": "web",
@@ -31,23 +36,69 @@
                     {
                       "name": "terminal-portfolio.md",
                       "type": "file",
-                      "content": "# Terminal Portfolio\n\n**Durum:** Aktif Geliştirme\n**Teknolojiler:** Nuxt 3, Vue 3, TypeScript, TailwindCSS\n\n## Açıklama\n\nTamamen terminal temalı, interaktif bir portfolyo web sitesi. Gerçek bir CLI deneyimi sunar.\n\n## Özellikler\n\n- Terminal benzeri arayüz\n- Dosya sistemi navigasyonu (ls, cd, pwd, tree)\n- Markdown dosya görüntüleme\n- Komut geçmişi ve tab completion\n- Responsive tasarım\n\n## Demo\n\n🔗 [alialaca.dev](https://alialaca.dev)\n\n## Kaynak Kod\n\n🔗 [GitHub](https://github.com/alialaca/portfolio)"
+                      "content": "# Terminal Portfolio\n\n**Durum:** Aktif Geliştirme\n**Teknolojiler:** Nuxt 3, Vue 3, TypeScript, TailwindCSS, Pinia\n\n## Açıklama\n\nTamamen terminal temalı, interaktif bir portfolyo web sitesi.\nGerçek bir CLI deneyimi sunar: dosya sistemi navigasyonu,\nkomut geçmişi, tab completion ve markdown görüntüleme.\n\n## Özellikler\n\n- Terminal benzeri arayüz\n- Sanal dosya sistemi (ls, cd, pwd, tree, cat)\n- Markdown dosya görüntüleme (tam ekran viewer)\n- Komut geçmişi ve tab completion\n- Komut alias desteği\n\n## Demo\n\n🔗 alialaca.dev\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/portfolio"
                     },
                     {
-                      "name": "task-manager.md",
+                      "name": "barbaros.md",
                       "type": "file",
-                      "content": "# Task Manager App\n\n**Durum:** Tamamlandı\n**Teknolojiler:** React, Node.js, PostgreSQL, Docker\n\n## Açıklama\n\nTakım bazlı görev yönetim uygulaması. Kanban board, zaman takibi ve raporlama özellikleri içerir.\n\n## Özellikler\n\n- Drag & drop kanban board\n- Gerçek zamanlı güncelleme (WebSocket)\n- Görev atama ve takip\n- Sprint planlama\n- Detaylı raporlar\n\n## Ekran Görüntüleri\n\n[Yakında eklenecek]\n\n## Kaynak Kod\n\n🔗 [GitHub](https://github.com/alialaca/task-manager)"
+                      "content": "# Barbaros Mahalle Platformu\n\n**Durum:** Aktif Geliştirme\n**Teknolojiler:** Nuxt 4, Tailwind CSS, Supabase\n\n## Açıklama\n\nBarbaros mahallesi sakinleri için şikayet ve talep sistemi.\nVatandaşlar anonim olarak şikayetlerini iletebilir, takip\nkodu ile durumlarını sorgulayabilir.\n\n## Özellikler\n\n- Anonim şikayet ve talep gönderimi\n- Takip kodu ile durum sorgulama\n- Kategori bazlı şikayetler:\n  Altyapı, Çevre, Güvenlik, Temizlik,\n  Aydınlatma, Park-Bahçe, Trafik\n- Yetkililer için admin paneli\n- Responsive tasarım\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/barbaros"
+                    },
+                    {
+                      "name": "servis-fixpro.md",
+                      "type": "file",
+                      "content": "# Servis FixPro Portal\n\n**Durum:** Tamamlandı\n**Teknolojiler:** Vue.js, TypeScript, Docker\n\n## Açıklama\n\nFixPro şirketi için geliştirilen servis yönetim portalı.\nMüşteri talepleri, servis takibi ve raporlama işlemleri\niçin web tabanlı arayüz.\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/servis.fixpro.com.tr"
+                    },
+                    {
+                      "name": "kimyasal-dubel.md",
+                      "type": "file",
+                      "content": "# Kimyasal Dübel\n\n**Durum:** Tamamlandı\n**Teknolojiler:** Vue.js, TypeScript, Docker\n\n## Açıklama\n\nKimyasal dübel ürünleri için kurumsal web sitesi.\nÜrün kataloğu ve firma bilgileri sunan modern arayüz.\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/kimyasal-dubel.com"
+                    },
+                    {
+                      "name": "drmehmetalican.md",
+                      "type": "file",
+                      "content": "# Dr. Mehmet Ali Can\n\n**Durum:** Tamamlandı\n**Teknolojiler:** Vue.js, Docker\n\n## Açıklama\n\nDoktor web sitesi. Hasta bilgilendirme, randevu ve\niletişim sayfaları içeren kurumsal site.\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/drmehmetalican"
+                    },
+                    {
+                      "name": "mustesnagaraj.md",
+                      "type": "file",
+                      "content": "# Müstesna Garaj\n\n**Durum:** Tamamlandı\n**Teknolojiler:** Vue.js, TypeScript, Docker\n\n## Açıklama\n\nMüstesna Garaj için kurumsal web sitesi.\nFirma tanıtımı ve hizmetlerin sunulduğu modern arayüz.\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/mustesnagaraj"
                     }
                   ]
                 },
                 {
-                  "name": "cli",
+                  "name": "api",
                   "type": "directory",
                   "children": [
                     {
-                      "name": "git-helper.md",
+                      "name": "fx-mikroapi.md",
                       "type": "file",
-                      "content": "# Git Helper CLI\n\n**Durum:** Tamamlandı\n**Teknolojiler:** Go, Cobra\n\n## Açıklama\n\nGit iş akışını hızlandıran komut satırı aracı. Sık kullanılan git komut dizilerini tek komutla çalıştırır.\n\n## Kurulum\n\n```bash\ngo install github.com/alialaca/git-helper@latest\n```\n\n## Kullanım\n\n```bash\n# Hızlı commit ve push\ngit-helper push \"commit mesajı\"\n\n# Branch temizliği\ngit-helper clean-branches\n\n# Interaktif rebase\ngit-helper rebase-i\n```\n\n## Kaynak Kod\n\n🔗 [GitHub](https://github.com/alialaca/git-helper)"
+                      "content": "# FX MikroAPI\n\n**Durum:** Tamamlandı\n**Teknolojiler:** JavaScript, Node.js\n\n## Açıklama\n\nMikro ERP sistemi ile entegrasyon sağlayan API servisi.\nPanel tabanlı iş operasyonları için Mikro yazılımı\nile veri alışverişi yapar.\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/fx-mikroapi"
+                    },
+                    {
+                      "name": "mikro-api.md",
+                      "type": "file",
+                      "content": "# MikroAPI\n\n**Durum:** Tamamlandı\n**Teknolojiler:** JavaScript, Node.js\n\n## Açıklama\n\nMikro ERP sistemi için REST API servisi.\nMuhasebe ve stok yönetimi verilerine programatik\nerişim sağlar.\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/MikroAPI"
+                    },
+                    {
+                      "name": "mikro-report.md",
+                      "type": "file",
+                      "content": "# Mikro Report\n\n**Durum:** Tamamlandı\n**Teknolojiler:** TypeScript, Node.js\n\n## Açıklama\n\nMikro ERP sistemi için raporlama servisi.\nİş verilerinden otomatik rapor üretimi ve\nveri analizi sağlar.\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/mikro-report"
+                    },
+                    {
+                      "name": "panel-api.md",
+                      "type": "file",
+                      "content": "# Panel API v2\n\n**Durum:** Tamamlandı\n**Teknolojiler:** JavaScript, Node.js\n\n## Açıklama\n\nYönetim paneli için backend API servisi.\nKullanıcı yönetimi, veri işleme ve panel\noperasyonları için RESTful endpoint'ler sunar.\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/panel-api.v2"
+                    }
+                  ]
+                },
+                {
+                  "name": "desktop",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "mnt-barkod.md",
+                      "type": "file",
+                      "content": "# MNT Barkod\n\n**Durum:** Tamamlandı\n**Teknolojiler:** Electron.js, Vue.js, jsPDF\n\n## Açıklama\n\nFixPro şirketi için geliştirilen masaüstü barkod\netiket yazdırma uygulaması. Manto dübel ürünleri\niçin barkod etiketi oluşturma ve yazdırma işlemlerini\nyönetir.\n\n## Özellikler\n\n- Barkod etiketi oluşturma\n- PDF formatında etiket çıktısı (jsPDF)\n- Toplu etiket yazdırma\n- Masaüstü uygulama (Electron)\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/mnt-barkod"
                     }
                   ]
                 },
@@ -56,9 +107,14 @@
                   "type": "directory",
                   "children": [
                     {
-                      "name": "k8s-deploy-tool.md",
+                      "name": "k8s-gitops-training.md",
                       "type": "file",
-                      "content": "# Kubernetes Deploy Tool\n\n**Durum:** Aktif Geliştirme\n**Teknolojiler:** Python, Kubernetes API, Click\n\n## Açıklama\n\nKubernetes deployment'larını yönetmek için CLI aracı. Blue-green ve canary deployment stratejilerini destekler.\n\n## Özellikler\n\n- Otomatik rollback\n- Canary deployment\n- Blue-green deployment\n- Deployment geçmişi\n- Slack bildirimleri\n\n## Kurulum\n\n```bash\npip install k8s-deploy-tool\n```\n\n## Kaynak Kod\n\n🔗 [GitHub](https://github.com/alialaca/k8s-deploy-tool)"
+                      "content": "# Kubernetes GitOps Training\n\n**Durum:** Eğitim Projesi\n**Teknolojiler:** C#, Java, Go, Docker, Kubernetes\n\n## Açıklama\n\nKubernetes ve GitOps pratikleri için eğitim deposu.\nFarklı programlama dillerinde (C#, Java, Go)\nmikroservisler oluşturarak Kubernetes deployment\nve GitOps iş akışlarını uygular.\n\n## Kapsam\n\n- Çoklu dilde mikroservis örnekleri\n- Docker konteynerizasyonu\n- Kubernetes manifest dosyaları\n- GitOps deployment stratejileri\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/k8s-gitOps-training"
+                    },
+                    {
+                      "name": "ghcr-test.md",
+                      "type": "file",
+                      "content": "# GHCR Test\n\n**Durum:** Tamamlandı\n**Teknolojiler:** Shell, GitHub Container Registry\n\n## Açıklama\n\nGitHub Container Registry (GHCR) entegrasyonu için\ntest projesi. Container image'ları build etme, push\netme ve GHCR üzerinden dağıtım süreçlerini kapsar.\n\n## Kaynak Kod\n\n🔗 github.com/alialaca/ghcr-test"
                     }
                   ]
                 }
@@ -71,12 +127,17 @@
                 {
                   "name": "README.md",
                   "type": "file",
-                  "content": "# Blog Yazıları\n\nTeknik blog yazılarım ve notlarım.\n\n## Kategoriler\n\n- Yazılım Geliştirme\n- DevOps\n- Kişisel Gelişim\n\n---\n\n*Yazılar yakında eklenecek.*"
+                  "content": "# Blog Yazıları\n\nTeknik blog yazılarım ve notlarım.\n\n## Yazılar\n\n1. **Vue 3 Composition API Rehberi** — Frontend\n2. **Docker ile Mikroservis Deploy** — DevOps\n\n---\n\n*Yeni yazılar ekleniyor...*"
                 },
                 {
-                  "name": "2024-01-vue-composition-api.md",
+                  "name": "vue3-composition-api.md",
                   "type": "file",
-                  "content": "# Vue 3 Composition API: Kapsamlı Rehber\n\n**Tarih:** 15 Ocak 2024\n**Kategori:** Frontend\n**Okuma Süresi:** 10 dakika\n\n---\n\n## Giriş\n\nVue 3 ile birlikte gelen Composition API, component mantığını organize etmek için yeni bir yaklaşım sunuyor.\n\n## Options API vs Composition API\n\n### Options API\n\n```javascript\nexport default {\n  data() {\n    return { count: 0 }\n  },\n  methods: {\n    increment() {\n      this.count++\n    }\n  }\n}\n```\n\n### Composition API\n\n```javascript\nimport { ref } from 'vue'\n\nexport default {\n  setup() {\n    const count = ref(0)\n    const increment = () => count.value++\n    \n    return { count, increment }\n  }\n}\n```\n\n## Composables ile Kod Paylaşımı\n\nComposition API'nin en güçlü yanlarından biri, mantığı yeniden kullanılabilir \"composable\" fonksiyonlara çıkarabilmektir.\n\n```javascript\n// useCounter.js\nimport { ref } from 'vue'\n\nexport function useCounter(initial = 0) {\n  const count = ref(initial)\n  const increment = () => count.value++\n  const decrement = () => count.value--\n  \n  return { count, increment, decrement }\n}\n```\n\n## Sonuç\n\nComposition API, özellikle büyük uygulamalarda kod organizasyonunu iyileştirir ve mantığın yeniden kullanılabilirliğini artırır.\n\n---\n\n*Bu yazı faydalı olduysa, diğer yazılarıma da göz atabilirsiniz.*"
+                  "content": "# Vue 3 Composition API: Kapsamlı Rehber\n\n**Tarih:** Ocak 2024\n**Kategori:** Frontend\n**Okuma Süresi:** 8 dakika\n\n---\n\n## Giriş\n\nVue 3 ile birlikte gelen Composition API, component mantığını\norganize etmek için güçlü bir yaklaşım sunuyor. Options API'den\nfarklı olarak, ilgili mantığı bir arada tutmamızı sağlar.\n\n## Neden Composition API?\n\n- Mantıksal ilgi alanlarına göre kod organizasyonu\n- TypeScript ile daha iyi uyum\n- Composable fonksiyonlar ile kod paylaşımı\n- Daha iyi tree-shaking ve bundle optimizasyonu\n\n## Composable Pattern\n\nComposition API'nin en güçlü yönü, mantığı yeniden\nkullanılabilir composable fonksiyonlara çıkarabilmektir.\n\n```typescript\nimport { ref, computed } from 'vue'\n\nexport function useCounter(initial = 0) {\n  const count = ref(initial)\n  const doubled = computed(() => count.value * 2)\n  const increment = () => count.value++\n  const decrement = () => count.value--\n\n  return { count, doubled, increment, decrement }\n}\n```\n\n## Sonuç\n\nComposition API, özellikle büyük uygulamalarda kod\norganizasyonunu iyileştirir. Nuxt 3 ile birlikte\nauto-import özelliği sayesinde kullanımı daha da\nkolaylaşır.\n\n---\n\n*Diğer yazılarım için blog/ klasörüne göz atın.*"
+                },
+                {
+                  "name": "docker-mikroservis.md",
+                  "type": "file",
+                  "content": "# Docker ile Mikroservis Deploy\n\n**Tarih:** Mart 2024\n**Kategori:** DevOps\n**Okuma Süresi:** 6 dakika\n\n---\n\n## Giriş\n\nMikroservis mimarisinde her servisin bağımsız olarak\npaketlenmesi ve dağıtılması gerekir. Docker bu süreci\nstandartlaştırır.\n\n## Dockerfile Best Practices\n\n- Multi-stage build kullanın\n- .dockerignore dosyası oluşturun\n- Root olmayan kullanıcı ile çalıştırın\n- Layer cache'ini optimize edin\n\n## Docker Compose ile Lokal Geliştirme\n\nBirden fazla servisi aynı anda ayağa kaldırmak için\nDocker Compose idealdir. Her servis kendi container'ında\nçalışır ve birbirleriyle network üzerinden iletişim kurar.\n\n## Kubernetes'e Geçiş\n\nDocker Compose lokal geliştirme için harikadır, ancak\nproduction ortamında Kubernetes tercih edilir.\nGitOps yaklaşımı ile deployment süreçleri otomatize\nedilebilir.\n\n## Sonuç\n\nDocker, mikroservis geliştirme ve dağıtım süreçlerinin\ntemel yapı taşıdır. Kubernetes ile birleştiğinde güçlü\nbir altyapı sunar.\n\n---\n\n*k8s-gitOps-training projeme göz atın: projects/devops/*"
                 }
               ]
             },
@@ -87,7 +148,7 @@
                 {
                   "name": "README.md",
                   "type": "file",
-                  "content": "# Sertifikalar\n\nAldığım sertifikalar ve başarılar.\n\n---\n\n## AWS\n- AWS Solutions Architect Associate (2023)\n\n## Kubernetes\n- CKA - Certified Kubernetes Administrator (2023)\n\n## Diğer\n- Docker Certified Associate (2022)"
+                  "content": "# Sertifikalar & Eğitimler\n\n## Tamamlanan Eğitimler\n\n- Docker & Konteynerizasyon\n- Kubernetes Temelleri\n- Vue.js İleri Seviye\n- TypeScript ile Fullstack Geliştirme\n- Git & GitHub İş Akışları\n\n## Devam Eden\n\n- Kubernetes CKA Hazırlık\n- AWS Cloud Practitioner\n\n---\n\n*Sertifikalar güncelleniyor...*"
                 }
               ]
             },
@@ -98,14 +159,9 @@
                 {
                   "name": "README.md",
                   "type": "file",
-                  "content": "# Hobiler & İlgi Alanları\n\n## Teknoloji\n- Open source projelere katkı\n- Yeni programlama dilleri öğrenme\n- Home lab kurma ve yönetme\n\n## Spor\n- Yüzme\n- Bisiklet\n\n## Diğer\n- Kitap okuma (Bilim kurgu, teknik kitaplar)\n- Podcast dinleme\n- Fotoğrafçılık"
+                  "content": "# Hobiler & İlgi Alanları\n\n## Teknoloji\n\n- Open source projelere katkı\n- Yeni teknolojileri deneme\n- Home lab kurma ve yönetme\n- Terminal araçları ve CLI geliştirme\n\n## Spor\n\n- Yüzme\n- Bisiklet\n\n## Diğer\n\n- Kitap okuma\n- Podcast dinleme"
                 }
               ]
-            },
-            {
-              "name": "contact.txt",
-              "type": "file",
-              "content": "╔══════════════════════════════════════════════════════════════╗\n║                        İLETİŞİM                              ║\n╚══════════════════════════════════════════════════════════════╝\n\nBenimle iletişime geçmek için:\n\n📧 Email: ali@alialaca.dev\n\n🔗 Sosyal Medya:\n   • GitHub: github.com/alialaca\n   • LinkedIn: linkedin.com/in/alialaca\n   • Twitter: @alialaca\n\n💼 İş Teklifleri:\n   İş fırsatları için email üzerinden ulaşabilirsiniz.\n\n🤝 Open Source:\n   Projelerime katkıda bulunmak isterseniz GitHub'dan\n   issue açabilir veya PR gönderebilirsiniz."
             }
           ]
         }
