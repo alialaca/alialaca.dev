@@ -1,0 +1,16 @@
+node_modules
+.git
+.nuxt
+.output
+.data
+.nitro
+.cache
+dist
+.idea
+.fleet
+.DS_Store
+*.log
+.env
+.env.*
+.playwright-mcp
+deploy.tar

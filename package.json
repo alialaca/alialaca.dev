@@ -8,7 +8,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "git archive --format=tar -o deploy.tar HEAD && caprover deploy -n hetzner -a alialaca -t ./deploy.tar && rm ./deploy.tar"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.11.3",
