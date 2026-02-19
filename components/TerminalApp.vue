@@ -20,7 +20,7 @@ const welcomeMessage = `
 ╚═╝  ╚═╝╚══════╝╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 `
 
-const welcomeInfo = `Welcome to alialaca.dev - Interactive Terminal Portfolio`
+const welcomeInfo = `Interactive Terminal Portfolio`
 
 const hasHistory = computed(() => terminal.history.length > 0)
 
