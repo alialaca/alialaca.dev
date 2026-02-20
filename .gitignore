@@ -27,3 +27,5 @@ logs
 *.sw?
 
 .playwright-mcp
+deploy.tar
+*.png
