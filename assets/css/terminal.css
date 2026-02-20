@@ -56,7 +56,7 @@ body {
 
 /* Terminal Container */
 .terminal-container {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -76,6 +76,7 @@ body {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
+  --neofetch-info-offset: 0ms;
 }
 
 .neofetch__logo {
@@ -519,4 +520,158 @@ body {
 
 .help-description {
   color: var(--terminal-gray);
+}
+
+/* File Viewer Close Button (visible on mobile only) */
+.file-viewer-close {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--terminal-border);
+  color: var(--terminal-gray);
+  font-family: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.file-viewer-close:hover {
+  color: var(--terminal-red);
+  border-color: var(--terminal-red);
+}
+
+/* ==================== */
+/* Responsive: <= 640px */
+/* ==================== */
+@media (max-width: 640px) {
+  body {
+    font-size: 0.8125rem;
+  }
+
+  .terminal-container {
+    padding: 0.5rem;
+  }
+
+  /* Neofetch: stack vertically */
+  .neofetch {
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+
+  .neofetch__content {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    width: 100%;
+    --neofetch-info-offset: 300ms;
+  }
+
+  .neofetch__logo {
+    font-size: 0.75rem;
+  }
+
+  .neofetch__info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .neofetch__entry {
+    white-space: normal;
+  }
+
+  .neofetch__label {
+    min-width: 9ch;
+  }
+
+  /* Output: horizontal scroll for tabular content */
+  .output-entry {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prompt stays on one line */
+  .terminal-prompt {
+    white-space: nowrap;
+  }
+
+  /* File Viewer adjustments */
+  .file-viewer-content {
+    padding: 0.75rem;
+  }
+
+  .file-viewer-hint {
+    display: none;
+  }
+
+  .file-viewer-close {
+    display: inline-flex;
+  }
+
+  .file-viewer-header,
+  .file-viewer-footer {
+    padding: 0.375rem 0.75rem;
+  }
+
+  /* Markdown content scaling */
+  .markdown-content h1 {
+    font-size: 1.375rem;
+  }
+
+  .markdown-content h2 {
+    font-size: 1.175rem;
+  }
+
+  .markdown-content h3 {
+    font-size: 1rem;
+  }
+
+  .markdown-content pre {
+    padding: 0.75rem;
+    font-size: 0.8em;
+  }
+
+  .markdown-content table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  /* Thinner scrollbars */
+  .terminal-history::-webkit-scrollbar,
+  .file-viewer-content::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+/* ==================== */
+/* Responsive: <= 480px */
+/* ==================== */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.75rem;
+  }
+
+  .terminal-container {
+    padding: 0.375rem;
+  }
+
+  .neofetch__logo {
+    font-size: 0.625rem;
+  }
+
+  .neofetch__content {
+    gap: 1rem;
+  }
+
+  .neofetch__label {
+    min-width: 8ch;
+  }
+
+  .neofetch__sep {
+    overflow: hidden;
+    max-width: 100%;
+  }
 }

@@ -32,6 +32,7 @@ onUnmounted(() => {
     <div class="file-viewer-header">
       <span class="file-viewer-title">{{ fileName }}</span>
       <span class="file-viewer-hint">Press 'q' or ESC to close</span>
+      <button class="file-viewer-close" @click="emit('close')" aria-label="Close">&times;</button>
     </div>
 
     <!-- Content -->
