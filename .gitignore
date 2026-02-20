@@ -25,3 +25,5 @@ logs
 
 # Typing
 *.sw?
+
+.playwright-mcp
