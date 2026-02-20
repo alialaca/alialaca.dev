@@ -53,20 +53,20 @@ const palette = [
       </div>
 
       <div class="neofetch__info">
-        <div class="neofetch__header" :style="{ animationDelay: '50ms' }">
+        <div class="neofetch__header" :style="{ animationDelay: 'calc(var(--neofetch-info-offset) + 50ms)' }">
           ali<span class="neofetch__at">@</span>alialaca.dev
         </div>
-        <div class="neofetch__sep" :style="{ animationDelay: '80ms' }">────────────────</div>
+        <div class="neofetch__sep" :style="{ animationDelay: 'calc(var(--neofetch-info-offset) + 80ms)' }">────────────────</div>
         <div
           v-for="(item, i) in info"
           :key="item.label"
           class="neofetch__entry"
-          :style="{ animationDelay: `${(i + 2) * 30 + 50}ms` }"
+          :style="{ animationDelay: `calc(var(--neofetch-info-offset) + ${(i + 2) * 30 + 50}ms)` }"
         >
           <span class="neofetch__label">{{ item.label }}</span>
           <span class="neofetch__value">{{ item.value }}</span>
         </div>
-        <div class="neofetch__palette" :style="{ animationDelay: `${(info.length + 3) * 30 + 50}ms` }">
+        <div class="neofetch__palette" :style="{ animationDelay: `calc(var(--neofetch-info-offset) + ${(info.length + 3) * 30 + 50}ms)` }">
           <div class="neofetch__palette-row">
             <span v-for="c in palette" :key="c" :style="{ color: `var(${c})` }">███</span>
           </div>
