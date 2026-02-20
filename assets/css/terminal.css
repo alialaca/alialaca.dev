@@ -85,7 +85,7 @@ body {
 
 .neofetch__logo-line {
   white-space: pre;
-  line-height: 1.15;
+  line-height: 1;
   opacity: 0;
   animation: neofetch-print 0.01s forwards;
 }
