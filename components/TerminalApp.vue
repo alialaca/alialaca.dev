@@ -11,17 +11,6 @@ const { executeCommand } = useCommands()
 const terminalBodyRef = ref<HTMLElement | null>(null)
 const inputRef = ref<InstanceType<typeof import('./Terminal/TerminalInput.vue').default> | null>(null)
 
-const welcomeMessage = `
- █████╗ ██╗     ██╗     █████╗ ██╗      █████╗  ██████╗ █████╗
-██╔══██╗██║     ██║    ██╔══██╗██║     ██╔══██╗██╔════╝██╔══██╗
-███████║██║     ██║    ███████║██║     ███████║██║     ███████║
-██╔══██║██║     ██║    ██╔══██║██║     ██╔══██║██║     ██╔══██║
-██║  ██║███████╗██║    ██║  ██║███████╗██║  ██║╚██████╗██║  ██║
-╚═╝  ╚═╝╚══════╝╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
-`
-
-const welcomeInfo = `Interactive Terminal Portfolio`
-
 const hasHistory = computed(() => terminal.history.length > 0)
 
 onMounted(() => {
@@ -71,11 +60,8 @@ function handleViewerClose() {
 
 <template>
   <div class="terminal-container" @click="handleBodyClick">
-    <!-- Centered Welcome (shown when no history) -->
-    <div v-if="!hasHistory" class="welcome-center">
-      <pre class="welcome-ascii">{{ welcomeMessage }}</pre>
-      <p class="welcome-info">{{ welcomeInfo }}</p>
-    </div>
+    <!-- Neofetch Welcome (shown when no history) -->
+    <TerminalNeofetch v-if="!hasHistory" />
 
     <!-- Scrollable History Area (shown when has history) -->
     <div v-else ref="terminalBodyRef" class="terminal-history">
