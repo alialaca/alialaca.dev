@@ -2,6 +2,7 @@ import type { CommandResult, OutputLine } from '~/types'
 import { useFileSystemStore } from '~/stores/fileSystem'
 import { useTerminalStore } from '~/stores/terminal'
 import { useAuthStore } from '~/stores/auth'
+import { useTracking } from '~/composables/useTracking'
 
 interface CommandDefinition {
   name: string
@@ -47,6 +48,7 @@ export function useCommands() {
   const fileSystem = useFileSystemStore()
   const terminal = useTerminalStore()
   const auth = useAuthStore()
+  const tracking = useTracking()
 
   function getCommandNames(): string[] {
     return COMMANDS.map((c) => c.name)
@@ -81,6 +83,8 @@ export function useCommands() {
     const command = parts[0].toLowerCase()
     const args = parts.slice(1)
 
+    tracking.trackCommand(command, args)
+
     switch (command) {
       case 'help':
         return cmdHelp()
@@ -103,6 +107,7 @@ export function useCommands() {
       case 'logout':
         return cmdLogout()
       default:
+        tracking.trackError('command-not-found', command)
         return {
           output: [error(`command not found: ${command}`)],
         }
@@ -193,9 +198,11 @@ export function useCommands() {
 
   function cmdCd(args: string[]): CommandResult {
     const target = args[0] || '~'
+    const from = fileSystem.currentPath
 
     try {
       fileSystem.setCurrentPath(target)
+      tracking.trackNavigation(from, fileSystem.currentPath)
       return { output: [] }
     } catch (e) {
       return {
@@ -269,6 +276,7 @@ export function useCommands() {
 
     const [username, password] = args
     const success_login = auth.login(username, password)
+    tracking.trackLoginAttempt(success_login)
 
     if (success_login) {
       return { output: [success(`Hoş geldin, ${auth.username}!`)] }

@@ -2,6 +2,7 @@
 import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { useTerminalStore } from '~/stores/terminal'
 import { useTabCompletion } from '~/composables/useTabCompletion'
+import { useTracking } from '~/composables/useTracking'
 
 const emit = defineEmits<{
   submit: [command: string]
@@ -9,6 +10,7 @@ const emit = defineEmits<{
 
 const terminal = useTerminalStore()
 const { getCompletion } = useTabCompletion()
+const tracking = useTracking()
 
 const inputValue = ref('')
 const inputRef = ref<HTMLInputElement | null>(null)
@@ -22,6 +24,7 @@ function startHintTimer() {
   if (inputValue.value === '' && terminal.history.length === 0) {
     hintTimeout = setTimeout(() => {
       showHint.value = true
+      tracking.trackHintShown()
     }, 5000)
   }
 }
@@ -88,6 +91,7 @@ function handleKeyDown(e: KeyboardEvent) {
     const prev = terminal.getPreviousCommand()
     if (prev !== null) {
       inputValue.value = prev
+      tracking.trackHistoryNavigate()
     }
     return
   }
@@ -98,6 +102,7 @@ function handleKeyDown(e: KeyboardEvent) {
     const next = terminal.getNextCommand()
     if (next !== null) {
       inputValue.value = next
+      tracking.trackHistoryNavigate()
     }
     return
   }
@@ -112,6 +117,8 @@ function handleKeyDown(e: KeyboardEvent) {
 
 function handleTabCompletion() {
   const result = getCompletion(inputValue.value)
+
+  tracking.trackTabComplete(inputValue.value, result.suggestions.length)
 
   if (result.suggestions.length === 0) {
     return
