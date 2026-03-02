@@ -31,3 +31,4 @@ deploy.tar
 *.png
 !public/favicon-32x32.png
 !public/apple-touch-icon.png
+!desktop-1280-neofetch.png
