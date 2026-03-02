@@ -28,6 +28,7 @@ export default defineNuxtConfig({
               src: `${process.env.NUXT_PUBLIC_UMAMI_URL}/script.js`,
               async: true,
               'data-website-id': process.env.NUXT_PUBLIC_UMAMI_WEBSITE_ID,
+              'data-domains': process.env.NUXT_PUBLIC_UMAMI_DOMAIN || '',
             }]
           : []),
       ],
